@@ -48,30 +48,30 @@ Total waktu: acak antara 0.2 – 0.8 detik
 Menggunakan ThreadPoolExecutor dengan jumlah thread yang terbatas agar tidak memicu sistem deteksi.
 
 ### 4. Dukungan Protokol
-HTTP Basic Auth → Login web
-SSH Brute Force → Server SSH
-FTP → (Planned)
+- HTTP Basic Auth → Login web
+- SSH Brute Force → Server SSH
+- FTP → (Planned)
 
 # Contoh Penggunaan
 ## 1.  Brute Force HTTP Basic Auth
 ```bash
 python3 stealthseq.py -t http://target.com/admin -p http -min 4 -max 6 -d 1.0 -j 0.5
 ```
--t: Target URL
--p http: Protokol HTTP
--min / -max: Panjang password
--d: Delay dasar (detik)
--j: Jitter
+- **-t:** Target URL
+- **-p http:** Protokol HTTP
+- **-min / -max:** Panjang password
+- **-d:** Delay Dasar (detik)
+- **-j:** Jitter
 
 ## 2. Brute Force SSH
 ```bash
 python3 stealthseq.py -t target.com:2222 -p ssh -c "abcdef123456" -min 5 -max 5 -w 2
 ```
--t: Target host dan port
--p ssh: Protokol SSH
--c: Charset
--min / -max: Panjang password
--w: Jumlah thread/worker
+- **-t:** Target Host dan port
+- **-p ssh:** Protokol HTTP
+- **-c:** Charset
+- **-min / -max:** Panjang password
+- **-w:** Jumlah thread/worker
 
 Disclaimer:
 StealthSeq hanya untuk tujuan edukasi dan pengujian di lingkungan legal. Dilarang keras menggunakan alat ini untuk aktivitas yang melanggar hukum.
